@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/"
+title = "Unit Converter"
+version = "1.0.0"
+id = "artifacts/unit-converter"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/" ]
+localPort = 23634
+
+[services.development]
+run = "pnpm --filter @workspace/unit-converter run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/unit-converter", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/unit-converter", "run", "serve" ]
+
+[services.env]
+PORT = "23634"
+BASE_PATH = "/"

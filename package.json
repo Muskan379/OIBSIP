@@ -1,0 +1,10 @@
+{
+    "name": "oibsip",
+    "version": "1.0.0",
+    "description": "OIBSIP workspace",
+    "private": true,
+    "workspaces": [
+        "Task_03",
+        "TASK_2"
+    ]
+}
